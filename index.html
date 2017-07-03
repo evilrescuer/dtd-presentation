@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
+		<style>
+			.test {
+				width: 100px;
+				height: 100px;
+				background-color: cornflowerblue;
+			}
+			
+			.test1 {
+				border: 10px red solid;
+			}
+			.test2 {
+				width: 100px;
+				height: 100px;
+			}
+			.test3 {
+				background-color: yellowgreen;
+				
+				height: 10%;
+			}
+			.test4 {
+				margin: 0 auto;
+			}
+			.test5 {
+				border: 1px red solid;
+				
+				padding: 20px;
+			}
+			.test6 {
+				font-size: 50px;
+			}
+			.test7 {
+				background-color: yellowgreen;
+				white-space: pre;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 怪异模式：盒模型的高宽包含内边距padding和边框border -->
+		<div class="test test1">
+			test1
+		</div>
+		
+		<!-- 怪异模式：可以设置行内元素的高宽 -->
+		<span class="test test2">
+			test2
+		</span>
+		
+		<!-- 怪异模式：可设置百分比的高度 -->
+		<div>
+			<div class="test3">
+				test3
+			</div>
+		</div>
+		
+		<!-- 怪异模式：用margin:0 auto设置水平居中在IE下会失效 -->
+		<div class="test test4">
+			test4
+		</div>
+		
+		<!-- 怪异模式：设置图片的padding会失效 -->
+		<div>
+			<img src="thinkphp/logo.png" class="test5" />
+		</div>
+		
+		<!-- 怪异模式：table中的字体属性不能继承上层的设置 -->
+		<div class="test test6">
+			<table>
+				<tr>
+					<td>test6</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- 怪异模式：white-space:pre会失效 -->
+		<div class="test test7">
+			te
+				st7
+		</div>
+	</body>
+</html>
